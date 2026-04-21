@@ -14,6 +14,26 @@ export default function(pi: ExtensionAPI) {
     api: "openai-completions",
     models: [
       {
+        id: "kimi-k2.6",
+        name: "Kimi K2.6",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: {
+          input: 0.95,
+          output: 6.0,
+          cacheRead: 0.16,
+          cacheWrite: 0.95,
+        },
+        contextWindow: 262144,
+        maxTokens: 32768,
+        compat: {
+          thinkingFormat: "zai",
+          maxTokensField: "max_tokens",
+          supportsDeveloperRole: false,
+          supportsStore: false,
+        },
+      },
+      {
         id: "kimi-k2.5",
         name: "Kimi K2.5",
         reasoning: true,
